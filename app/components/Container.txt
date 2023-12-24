@@ -1,0 +1,26 @@
+
+Interface Declaration:
+
+typescript
+
+interface ContainerProps {
+    children: React.ReactNode;
+}
+Here, an interface named ContainerProps is declared. It specifies that a component using these props should receive a property named children of type React.ReactNode. React.ReactNode is a generic type in React that can represent any valid JSX content.
+
+Functional Component Definition:
+
+typescript
+
+const Container: React.FC<ContainerProps> = ({ children }) => {
+    return (
+        <div>{children}</div>
+    );
+};
+const Container:: This declares a constant variable named Container.
+
+React.FC<ContainerProps>: This is a functional component written in TypeScript. It uses the FC (Functional Component) type from React with the specified ContainerProps interface. This helps to enforce the expected structure of props.
+
+({ children }): This is destructuring assignment in the function parameters. It extracts the children property from the props object.
+
+<div>{children}</div>: The component returns a <div> element with its content being the children prop. In React, the children prop is a special prop that allows you to pass JSX elements between the opening and closing tags of a component.
